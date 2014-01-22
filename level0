@@ -9,8 +9,10 @@ path = ARGV.length > 0 ? ARGV[0] : '/usr/share/dict/words'
 entries = File.read(path).split("\n")
 
 contents = $stdin.read
+contents = contents.downcase
+contents_words = contents.split(/[ ]/)
 output = contents.gsub(/[^ \n]+/) do |word|
-  if entries.include?(word.downcase)
+  if entries.bsearch {|x| x == word.downcase}
     word
   else
     "<#{word}>"
