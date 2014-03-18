@@ -1,5 +1,7 @@
 # Level 0
 
+I used this base code for a Code-Kata exercise with my team. Thanks Stripe!
+
 ## Usage
 
 To submit your code, first commit, and then run `git push`.
